@@ -19,6 +19,38 @@ It is designed to operate natively with AIC’s **ethical-from-kernel** architec
 - **Privacy-first & quantum-safe**: Built for long-term resilience in a post-scarcity world.
 - **GPLv3.0 licensed**: Full transparency and copyleft protection.
 
+### Structure 
+``` pgsql
+AIC-SSI/
+├── README.md                          # Trang chính + tầm nhìn SSI trong AIC
+├── LICENSE                            # GPLv3.0
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── GOVERNANCE.md
+├── POLICIES/
+│   ├── ETHICAL-IDENTITY-POLICY.md     # Chính sách danh tính đạo đức
+│   ├── ZERO-DONATION-POLICY.md        # (link hoặc copy từ repo Legal)
+│   └── THIRD-PATH-PRINCIPLES.md
+├── src/                               # Code chính
+│   ├── core/                          # SSI Core Engine
+│   ├── did/                           # Decentralized Identifier
+│   ├── vc/                            # Verifiable Credentials
+│   ├── wallet/                        # Ethical Wallet
+│   └── crypto/                        # Quantum-safe + ethical crypto
+├── tests/                             # Unit & integration tests
+├── scripts/                           # Tools hỗ trợ
+├── docs/                              # Tài liệu kỹ thuật
+│   ├── architecture.md
+│   └── integration-guide.md
+├── examples/                          # Ví dụ sử dụng
+├── ANNOUNCEMENTS/                     # Lưu thông báo
+│   └── YYYY-MM-Status.md
+├── HISTORY/
+│   └── CHANGELOG.md
+└── CONTACT.md 
+``` 
+
 ### Key Features (in development)
 - Decentralized Identifiers (DID)
 - Verifiable Credentials (VC)
