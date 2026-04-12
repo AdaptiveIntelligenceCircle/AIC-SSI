@@ -45,7 +45,7 @@ namespace aic :: ssi :: vc
         shared_ptr<VCSchemaRegistry> m_schemas; 
 
         string nowISO8601() const;
-        string makeCredentialId(const CredentialIssueRequest &req) const; 
+        string makeCredentialId(const CredentialIssueRequest &request) const; 
         
         string canonicalizeForSigning(const VerifiableCredential &vc); 
     }; 
