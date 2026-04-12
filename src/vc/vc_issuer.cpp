@@ -40,4 +40,43 @@ namespace aic :: ssi :: vc
         oss << "urn : aic : vc" << request.issuerDID << ":" << request.subjectDID << ":" << ts << endl; 
         return oss.str(); 
     }
+
+    string VCIssuer :: canonicalizeForSigning(const VerifiableCredential &vc)
+    {
+        auto j = vc.toJson(); 
+        j.erase("proof");
+        return j.dump(); 
+    }
+
+    optional<VerifiableCredential> VCIssuer :: issue(const CredentialIssueRequest &req)
+    {
+        if (!m_crypto) return nullopt; 
+        if (!m_schemas) return nullopt; 
+
+        if (req.issuerDID.empty() or req.subjectDID.empty()) return nullopt;
+        if (req.schemaId.empty()) return nullopt;
+
+        auto schema = m_schemas -> getSchema(req.schemaId) ; 
+        if (!schema) return nullopt; 
+
+        string reason; 
+        if (!schema -> validateClaims(req.claims, reason ))
+        {
+            return nullopt;
+        }
+
+        VerifiableCredential vc;
+        vc.id = makeCredentialId(req); 
+
+        vc.issuer = req.issuerDID; 
+        vc.subject = req.subjectDID;
+        vc.issuranceDate = nowISO8601(); 
+        vc.expirationDate = req.expirationDates; 
+
+        vc.types = req.types;
+        vc.contexts = req.contexts; 
+
+        // Ensure baseline context/hype.. 
+        
+    }
 }
