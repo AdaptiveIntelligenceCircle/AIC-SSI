@@ -77,6 +77,28 @@ namespace aic :: ssi :: vc
         vc.contexts = req.contexts; 
 
         // Ensure baseline context/hype.. 
-        
+        if (vc.contexts.empty())
+        vc.contexts.push_back("");
+        if (vc.types.empty())
+        vc.types.push_back(""); 
+
+        vc.claims = req.claims; 
+        vc.claims["schemaId"] = req.schemaId; 
+
+        // Build proof... 
+        VCProof proof; 
+        proof.type = "AICSignature2026"; // placeholder type.. 
+        proof.created = vc.issuranceDate; 
+        proof.verificationMethod = req.verificationMethod.empty()
+        ? (req.issuerDID + "#key-1")
+        : req.verificationMethod; 
+        proof.proofPurpose = "assertionMethod"; 
+
+        string msg = canonicalizeForSigning(vc); 
+        // NOTE : crypto provider should sign with issuer key.. 
+        // mVP : crypto signs raw string.. 
+
+        if (!vc.isValidBasic()) return nullopt; 
+        return vc;
     }
 }
