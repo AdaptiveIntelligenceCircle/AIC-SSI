@@ -8,9 +8,14 @@
 </p>
 
 ### Vision
-AIC-SSI is a fully decentralized, ethical-first identity system that gives every individual and node true sovereignty over their identity, data, and credentials — without relying on governments, corporations, or centralized authorities.
 
-It is designed to operate natively with AIC’s **ethical-from-kernel** architecture and **third path absolute** principles.
+A governance-oriented exploration of self-sovereign identity,
+human agency, trust, and institutional resilience
+for a world of increasingly distributed and cross-border systems.
+
+This repository is not an identity provider. This repository is not a government identity system. This repository is not a production-ready implementation.
+
+Its purpose is to explore how identity, governance, and human agency may coexist within public-interest digital infrastructure.
 
 ### Core Principles
 - **Self-sovereignty**: Identity belongs to the individual/node, not to any third party.
