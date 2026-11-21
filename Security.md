@@ -1,22 +1,14 @@
-# Security Policy - AIC-SSI
+# Security Policy
 
-AIC-SSI is built with the principle that **identity must be sovereign and private by design**.
+## Supported Versions
+Only the latest version of AIC-TestNet is supported.
 
-### Responsible Disclosure
-If you discover a security vulnerability, please report it responsibly.
+## Reporting a Vulnerability
+If a vulnerability is found:
+- Email: ndtribk@gmail.com
+- Describe the problem in detail and how to reproduce it
+- Do not disclose it before it is fixed
 
-**How to report:**
-- Email: `security@adaptiveintelligencecircle.org`
-- Do **NOT** open public issues.
-
-We will acknowledge your report within 7 days.
-
-### Our Commitments
-- No backdoors or government-access mechanisms.
-- Quantum-resistant cryptography where possible.
-- All identity operations are governed by the ethical kernel (IBCS).
-- Privacy is a fundamental right, not a feature.
-
-During the Founder’s military service (2027–2029), security updates will be handled by trusted maintainers under strict ethical review.
-
-**Scope**: This policy covers the entire AIC-SSI repository.
+## Response
+- Acknowledgement within 48 hours
+- Fix within 14 days if serious
