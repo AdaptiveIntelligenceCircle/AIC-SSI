@@ -20,8 +20,6 @@
 
 **All milestones are subject to the Founder’s return and continued adherence to third path principles.** -->
 
-# Roadmap – AIC-SSI
-
 **Last updated:** November 2026  
 **Status:** Early exploration  
 **Guiding constraint:** Remain secondary to Parallel TestNet and core ethical kernel progress. Prefer design clarity over implementation speed.
